@@ -23,6 +23,7 @@ public class Server {
         try {
             ss = new ServerSocket(porta);
             System.out.println("il server è in ascolto");
+            //viene creato il countdown, definito e con il metodo start avviato
             Countdown c = new Countdown(10);
             c.start();
         } catch (IOException ex) {
@@ -33,7 +34,7 @@ public class Server {
     public void inAscolto(){
         try {
             so = ss.accept();
-            System.out.println("connessione stabilita "+so.toString());
+            System.out.println("connessione stabilita");
         } catch (IOException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         }

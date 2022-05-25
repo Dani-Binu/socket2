@@ -21,9 +21,11 @@ public class MainClient {
      */
     public static void main(String[] args) {
         try {
+            //istanziato il client
             Client cli = new Client(InetAddress.getLocalHost(), 2000);
+            //viene inserito in una stringa il messaggio del server
             String messLetto = cli.leggi();
-            
+            //viene stampato a video il messaggio
             System.out.println(messLetto);
 
         } catch (UnknownHostException ex) {
